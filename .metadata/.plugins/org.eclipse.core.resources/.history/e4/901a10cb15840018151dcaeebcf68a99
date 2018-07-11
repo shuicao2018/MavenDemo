@@ -1,0 +1,42 @@
+package bookmanager01;
+
+import static org.junit.Assert.*;
+
+import java.io.InputStream;
+import java.util.List;
+
+import org.apache.ibatis.session.SqlSession;
+import org.junit.Test;
+
+import com.xuchao.bookmanager01.dao.MyBatisUtil;
+import com.xuchao.bookmanager01.mapper.BookTypeMapper;
+import com.xuchao.bookmanager01.pojo.BookType;
+
+
+public class TestBookTypeMapper {
+
+	@Test
+	public void test() {
+		
+		//获得会话对象
+        SqlSession session=MyBatisUtil.getSession();
+        
+        BookTypeMapper mapper=  session.getMapper(BookTypeMapper.class);
+        List<BookType> list= mapper.getAllBookTypes();
+        
+        for (BookType bookType : list) {
+            System.out.println(bookType);
+        }
+
+	}
+	
+	public void TestBookTypeService()
+	{
+		BookTypeService
+		
+		
+		
+		
+	}
+
+}

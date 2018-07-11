@@ -1,0 +1,4 @@
+jdbc.driver=com.mysql.jdbc.Driver
+jdbc.url=jdbc:mysql://169.254.213.200:3306/Test?useSSL=false
+jdbc.username=xuc
+jdbc.password=xc

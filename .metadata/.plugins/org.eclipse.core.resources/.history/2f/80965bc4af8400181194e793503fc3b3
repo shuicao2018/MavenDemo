@@ -1,0 +1,9 @@
+package com.xuchao.bookmanager02.service;
+
+import org.apache.ibatis.session.SqlSession;
+
+public class BookTypeSessionService {
+  SqlSession sqlSession;
+  
+  
+}

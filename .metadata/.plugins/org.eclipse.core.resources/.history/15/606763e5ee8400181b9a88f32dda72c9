@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xuchao.bookstore.mapper.BookMapper">
+	<!--id应该是接口中的方法，结果类型如没有配置别名则应该使用全名称 -->
+	<select id="getAllBooks" resultType="BookType">
+		select * from books
+	</select>
+
+	<insert id="addBook" useGeneratedKeys="true" keyProperty="id"
+		parameterType="Book">
+		INSERT INTO books
+		(title,
+		price,
+		publishDate)
+		VALUES
+		(#{title},
+		#{price},
+		#{publishDate});
+	</insert>
+	
+	
+	<update id="updateBook">
+		UPDATE books
+			<set>
+				<if test="title != null">title=#{title},</if>
+				<if test="price != null">price=#{price},</if>
+				<if test="publishDate != null">publishDate=#{publishDate},</if>
+			</set>
+			WHERE id = #{id}
+
+		
+	</update>
+</mapper>

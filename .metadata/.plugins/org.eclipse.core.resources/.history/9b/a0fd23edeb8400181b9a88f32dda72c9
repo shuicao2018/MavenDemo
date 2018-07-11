@@ -1,0 +1,20 @@
+package com.xuchao.bookstore.pojo;
+
+public class Book {
+    /**
+     * 编号
+     */
+    private int id;
+    /**
+     * 书名
+     */
+    private String title;
+    /**
+     * 价格
+     */
+    private double price;
+    /**
+     * 出版日期
+     */
+    private Date publishDate;
+}

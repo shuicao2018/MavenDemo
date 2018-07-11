@@ -1,0 +1,5 @@
+package com.xuchao.bookmanager02.mapper;
+
+public interface BookTypeMapper {
+
+}
